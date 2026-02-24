@@ -18,13 +18,12 @@ main {
     margin-top: 2%;
 }
 
-/* Garante que o wrapper tenha o tamanho exato da imagem da pokedex */
 .pokedex-wrapper {
     position: relative;
     width: 100%;
     max-width: 425px;
     display: inline-block;
-    line-height: 0; /* Remove espaços fantasmas abaixo da imagem */
+    line-height: 0; 
 }
 
 .pokedex {
@@ -45,15 +44,12 @@ main {
     position: absolute;
     font-weight: 600;
     color: #aaa;
-    /* Ajuste fino: use top em % para acompanhar a altura da imagem */
     top: 58%; 
     left: 60%;
-    /* Centraliza o texto em relação ao ponto de ancoragem */
     transform: translate(-50%, -50%);
-    /* Fonte responsiva que escala com a largura da tela */
     font-size: clamp(0.5rem, 5vw, 1.3rem); 
     white-space: nowrap;
-    pointer-events: none; /* Evita que o texto interfira em cliques */
+    pointer-events: none; 
 }
 
 .pokemon__name {
@@ -63,11 +59,9 @@ main {
 
 .form {
     position: absolute;
-    /* Diminuímos o top para aproximar da tela cinza */
     top: 69%;            
     left: 45.5%;
     transform: translate(-50%, -50%);
-    /* Reduzimos a largura para o input ficar menor e mais centralizado */
     width: 75%;          
 }
 
@@ -85,18 +79,15 @@ main {
 
 .buttons {
   position: absolute;
-  /* Usar top garante que ele mantenha a distância fixa em relação ao topo da imagem */
   top: 90%; 
-  left: 45.5%; /* Alinhado com o input e o visor */
+  left: 45.5%; 
   transform: translate(-50%, -50%);
   display: flex;
   gap: 10px;
-  /* Largura reduzida para 55% para os botões não fugirem das bordas da carcaça */
   width: 55%; 
 }
 
 .button {
-  /* flex: 1 mantém os dois botões com o mesmo tamanho proporcional */
   flex: 1; 
   padding: 4%;
   border: 2px solid #000;
@@ -104,10 +95,8 @@ main {
   font-weight: 600;
   color: white;
   background-color: #444;
-  /* Mantendo seu estilo de sombra original */
   box-shadow: -2px 3px 0 #222, -4px 6px 0 #000;
   cursor: pointer;
-  /* Fonte escala com a largura da tela */
   font-size: clamp(8px, 3.5vw, 1rem); 
   display: flex;
   align-items: center;
@@ -116,7 +105,6 @@ main {
 }
 
 .button:active {
-  /* Ajuste para o efeito de clique não tremer o layout */
   box-shadow: inset 2px 2px 5px rgba(0,0,0,0.5);
   transform: translate(-2px, 2px);
 }
